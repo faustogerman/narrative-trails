@@ -53,7 +53,7 @@ class NarrativeLandscape():
         self.embeds = embeds
 
         if self.verbose:
-            print("Step 1/4: Constructing Projection Space with UMAP")
+            print("Step 1/3: Constructing Projection Space with UMAP")
 
         umap_model = umap.UMAP(
             n_neighbors=self.n_neighbors,
@@ -71,7 +71,7 @@ class NarrativeLandscape():
         self.low_dim_embeds = self.low_dim_embeds - np.mean(self.low_dim_embeds, axis=0)
 
         if self.verbose:
-            print("Step 2/4: Discovering topics with HDBSCAN")
+            print("Step 2/3: Discovering topics with HDBSCAN")
 
         hdbscan_model = hdbscan.HDBSCAN(
             min_cluster_size=self.min_cluster_size,
@@ -91,11 +91,8 @@ class NarrativeLandscape():
         if self.verbose:
             print(f"\t>>> Discovered {len(np.unique(self.cluster_labels))} Topics")
 
-        if self.verbose:
-            print(f"Step 3/4: Computing Mean K-NN Dist")
-
         if with_coherence_graph:  # this is only to be able to do parameter sensitivity tests
-            print("Step 4/4: Constructing Coherence Graph")
+            print("Step 3/3: Constructing Coherence Graph")
             self.__build_coherence_graph(ids, dates, constraints, node_ranks)
 
     def extract_narrative(self, s, t, hidden_nodes=None):
