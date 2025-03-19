@@ -3,7 +3,7 @@ A Method for Coherent Storyline Extraction via Maximum Capacity Path Optimizatio
 
 ![Narrative Trails Pipeline](./other/narrative-trails-pipeline.png)
 
-Narrative Trails is an embedding-based framework for extracting coherent storylines from large document datasets. Unlike traditional information retrieval, which retrieves documents without a pre-defined structure, Narrative Trails structures information into ordered narratives that maximize semantic coherence. This makes it easier for people to identify underlying patterns, connections, and themes that might not be immediately evident by the data.
+Narrative Trails is an embedding-based framework for extracting coherent storylines from large document datasets. Unlike traditional information retrieval, which retrieves documents without a pre-defined structure, Narrative Trails structures information into ordered narratives that maximize semantic coherence between documents. This makes it easier for people to identify underlying patterns, connections, and themes that might not be immediately evident by the data.
 
 ## Installation
 ```bash
@@ -11,10 +11,10 @@ git clone https://github.com/faustogerman/narrative-trails.git
 cd narrative-trails
 pip install -r requirements.txt
 ```
-Note: We recommend creating a dedicated conda environment to install the dependencies and execute this project.
+Note: We recommend using a dedicated Conda environment to install and execute this project.
 
 ## Usage
-After cloning the repository and installing the the dependencies in the `requirements.txt` file, open any of the `.ipynb` to reproduce our results. The [Examples](./Examples/) folder contains example notebooks for the News Articles and VisPub datasets.
+After cloning the repository and installing the dependencies from `requirements.txt` open and run any `.ipynb` file to reproduce our results. Example Jupyter notebooks for the News Articles and VisPub datasets are available in the [./Examples](./Examples/) folder with details about parameters and redundancy reduction.
 
 NOTE: Expect the results to be slightly different from ours, since each installation of UMAP and HDSCAN can lead to different initial random states, producing different low-dimensional projections.
 
@@ -50,7 +50,7 @@ idx    Topic   Date             title
 445    12      Jul 26, 2021     Protests break out in front of WH urging Biden to take firmer stance on Cuba
 ```
 
-**Example \#3 –Narrative About the Evolution of Visualization Techniques in Data Science** 
+**Example \#3 – Narrative About the Evolution of Visualization Techniques in Data Science** 
 ```
 idx    Topic   Date             Title
 ----------------------------------------------------------------
