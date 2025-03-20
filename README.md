@@ -13,6 +13,15 @@ pip install -r requirements.txt
 ```
 Note: We recommend using a dedicated Conda environment to install and execute this project.
 
+#### OpenAI API
+To re-extract embeddings or use your own dataset, create a `.env` file at the root of the project and add an `OPENAI_API_KEY` entry with your OpenAI key to make API calls for embedding extraction. 
+
+However, we already provide embeddings for our evaluation datasets in the `./data` folder. Therefore, you can run this project and reproduce our results without an API key by simply commenting out the following line in `./Library/embedding_extraction.py`:
+
+```python
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+```
+
 ## Usage
 After cloning the repository and installing the dependencies from `requirements.txt` open and run any `.ipynb` file to reproduce our results. Example Jupyter notebooks for the News Articles and VisPub datasets are available in the [./Examples](./Examples/) folder with details about parameters and redundancy reduction.
 
