@@ -88,5 +88,16 @@ idx    Topic   Date             Title
 
 ## Citing Our Work
 ```
-Publication and Citation Coming Soon...
+@inproceedings{German2025Narrative,
+  author    = {Fausto German and Brian Keith and Chris North},
+  title     = {Narrative Trails: A Method for Coherent Storyline Extraction via Maximum Capacity Path Optimization},
+  booktitle = {Proceedings of the Text2Story 2025 Workshop@ECIR2025},
+  series    = {CEUR Workshop Proceedings},
+  year      = {2025},
+  address   = {Lucca, Italy},
+  month     = apr,
+  pages     = {15--22},
+  publisher = {CEUR-WS},
+  note      = {April 10, 2025}
+}
 ```
